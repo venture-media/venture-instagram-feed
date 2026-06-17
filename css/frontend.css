@@ -1,0 +1,68 @@
+// venture-instagram-feed CSS
+
+.venture-ig-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.venture-ig-card {
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.venture-ig-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.venture-ig-image {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.venture-ig-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.venture-ig-card:hover img {
+    transform: scale(1.05);
+}
+
+.ig-video-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.venture-ig-content {
+    padding: 16px;
+    background: #fff;
+}
+
+.venture-ig-content p {
+    margin: 0 0 12px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.ig-view-more {
+    font-size: 13px;
+    color: #0066cc;
+    font-weight: 600;
+}
