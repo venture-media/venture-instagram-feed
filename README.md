@@ -1,3 +1,7 @@
-A plugin that displays your Instagram feed with a shortcode. Custom Graph API. Only shows posts containing #YourHashtag.
+# Venture Instagram Feed
 
-Use shortcode: [venture_instagram limit="5"]
+Custom Instagram feed plugin using the Graph API.
+
+**Shortcode:**
+```php
+[venture_instagram limit="6"]
