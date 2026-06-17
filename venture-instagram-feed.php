@@ -7,7 +7,7 @@
  * Author:            Leon de Klerk
  * Author URI:        https://github.com/Leon2332
  * License:           MIT
- * License URI:       https://github.com/venture-media/venture-instagram-feed/blob/4e81c5a353d784309022d51a78d232c9d87af921/LICENSE
+ * License URI:       https://github.com/venture-media/venture-instagram-feed/blob/LICENSE
  */
 
 // Only shows posts containing #YourHashtag in line:64
@@ -120,3 +120,14 @@ function venture_instagram_shortcode( $atts ) {
     return ob_get_clean();
 }
 add_shortcode( 'venture_instagram', 'venture_instagram_shortcode' );
+
+// Enqueue styles
+function venture_enqueue_instagram_feed_styles() {
+    wp_register_style(
+        'venture-instagram-feed',
+        plugin_dir_url( __FILE__ ) . 'css/frontend.css',
+        [],
+        VENTURE_INSTAGRAM_FEED_VERSION   // Plugin version
+    );
+}
+add_action( 'wp_enqueue_scripts', 'venture_enqueue_instagram_feed_styles' );
