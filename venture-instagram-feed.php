@@ -10,9 +10,18 @@
  * License URI:       https://github.com/venture-media/venture-instagram-feed/blob/4e81c5a353d784309022d51a78d232c9d87af921/LICENSE
  */
 
-// Only shows posts containing #YourHashtag in line:55
-// Cache duration in line:72
-// Limit amount of posts in line:81
+// Only shows posts containing #YourHashtag in line:64
+// Cache duration in line:81
+// Limit amount of posts in line:90
+
+// Define plugin version
+define( 'VENTURE_INSTAGRAM_FEED_VERSION', '0.9.0' );
+// Instagram Graph API
+define('VENTURE_IG_USER_ID', 'REPLACE WITH NUMERIC ID');
+define('VENTURE_IG_ACCESS_TOKEN', 'REPLACE WITH LONG-LIVED TOKEN');
+
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) exit;
 
 
 // Main function to get filtered posts
